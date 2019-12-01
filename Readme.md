@@ -8,7 +8,7 @@ df = pd.read_csv('BeijingPM20100101_20151231.csv')
 ```
 导入结果预览
 
-![image-20191201202725068](C:\Users\speci\AppData\Roaming\Typora\typora-user-images\image-20191201202725068.png)
+![image-20191201202725068](./img/image-20191201202725068.png)
 
 #### 保留和PM值相关的列，并汇总计算平均值
 ```python
@@ -30,14 +30,14 @@ for i in cln_data.index:
 ```
 结果
 
-![image-20191201202929913](C:\Users\speci\AppData\Roaming\Typora\typora-user-images\image-20191201202929913.png)
+![image-20191201202929913](./img/image-20191201202929913.png)
 
 #### 将清理后得到的数据按照年汇总得到每年的PM平均值
 ```python
 grouped = cln_data['PM_AVG'].groupby(cln_data['year']).mean()
 ```
 
-![image-20191201203055998](C:\Users\speci\AppData\Roaming\Typora\typora-user-images\image-20191201203055998.png)
+![image-20191201203055998](./img/image-20191201203055998.png)
 
 #### 将结果绘制成折线图
 ```python
@@ -46,7 +46,7 @@ import matplotlib.pyplot as plt
 plt.plot(grouped)
 ```
 
-![image-20191201203232183](C:\Users\speci\AppData\Roaming\Typora\typora-user-images\image-20191201203232183.png)
+![image-20191201203232183](./img/image-20191201203232183.png)
 
 ### 汇总计算每年中1-12月的PM指数数据变化情况
 对于每年的数据按照月分组，计算出每月的PM平均值，之后将六年的数据绘制成折线图
@@ -76,7 +76,7 @@ for x in fig_list:
 ```
 结果如下
 
-![image-20191201203511527](C:\Users\speci\AppData\Roaming\Typora\typora-user-images\image-20191201203511527.png)
+![image-20191201203511527](./img/image-20191201203511527.png)
 六年各自的汇总数据如下
 ##### 2010年
 ```
